@@ -1,0 +1,61 @@
+# For Flickr30k evaluation
+flickr_image_root: "/gfs/shared/public/datasets/flickr"
+flickr_ann_root: "/gfs/shared/public/datasets/flickr"
+
+# For COCO evaluation (uncomment these lines and comment Flickr lines above)
+coco_image_root: "/gfs/shared/public/datasets/albef/coco/images"
+coco_ann_root: "/gfs/shared/public/datasets/albef/json_finetune"
+pretrain_files: [
+  "/gfs/shared/public/datasets/albef/ccs_synthetic_filtered_large_local_cp.json",
+  "/gfs/shared/public/datasets/albef/json_pretrain/json_pretrain/vg.json",
+  "/gfs/shared/public/datasets/albef/json_pretrain/json_pretrain/coco.json",
+]
+finetune_files: [
+  "/gfs/shared/public/datasets/albef/json_pretrain/json_pretrain/coco.json",
+]
+
+zs_dataset: "/gfs/shared/public/datasets/albef/vg_large_objects.json"
+# size of vit model; base or large
+batch_size: 32
+data: ""
+teacher_siglip_path: "google/siglip2-large-patch16-384"
+siglip_path: "google/siglip2-large-patch16-384"
+# language_reranker_path: "cross-encoder/ms-marco-MiniLM-L6-v2"
+language_model_path: "microsoft/MiniLM-L12-H384-uncased"
+multimodal_projection_hidden_dim: 8192
+num_negatives_per_sample: 1
+num_hard_negatives: 0
+num_compressed_tokens: 32
+
+# optimizer
+weight_decay: 0.05
+pretraining_lr: 3e-4
+finetune_lr: 2e-5
+min_lr: 1e-6
+warmup_lr: 1e-6
+lr_decay_rate: 0.9
+max_epoch: 45
+# warmup_steps: 3000
+warmup_steps: 100
+
+# evaluation
+k: 10
+test_set: "flickr"  # Options: "flickr", "coco" - defaults to flickr if not specified
+
+# Zero-shot ImageNet configuration (only used when data: "imagenet_zeroshot")
+imagenet_classnames_path: "/gfs/shared/public/datasets/imagenet/classnames.txt"  # Path to ImageNet class names for filtering
+templates_path: "zeroshot_classification_templates.txt"  # Path to zero-shot templates file
+
+# Experiment logging configuration
+experiment:
+  backend: "comet"  # Options: "comet", "wandb" (currently only comet is implemented)
+  project: "efficient-fusion"  # Your Comet project name (can be overridden by COMET_PROJECT_NAME env var)
+  entity: "your_workspace"  # Your Comet workspace (can be overridden by COMET_WORKSPACE env var)
+  run_name: "multimodal-retrieval-training"  # Optional: custom run name
+
+# Set to true to disable experiment logging (useful for debugging)
+dry_mode: true
+
+# Reproducibility settings
+seed: 42  # Random seed for reproducible training
+deterministic: false  # Set to true for fully deterministic training (slower but more reproducible)

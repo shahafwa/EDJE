@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDJE: Efficient Discriminative Joint Encoders for Large Scale Vision-Language Reranking</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>EDJE: Efficient Discriminative Joint Encoders for Large Scale Vision-Language Reranking</h1>
+            <div class="authors">
+                <a href="https://arxiv.org/search/cs?searchtype=author&query=Taraday,+Mitchell+Keren"
+                    target="_blank">Mitchell Keren
+                    Taraday</a>*<sup>1</sup>,
+                <a href="https://arxiv.org/search/cs?searchtype=author&query=Wagner,+Shahaf" target="_blank">Shahaf
+                    Wagner</a>*<sup>1</sup>,
+                <a href="https://arxiv.org/search/cs?searchtype=author&query=Baskin,+Chaim" target="_blank">Chaim
+                    Baskin</a><sup>1</sup>
+            </div>
+            <div class="affiliations">
+                <sup>1</sup>INSIGHT Lab, Ben-Gurion University of the Negev, Israel<br>
+                <span style="font-size: 0.8em;">*Equal Contribution</span>
+            </div>
+
+            <div class="links">
+                <a href="https://arxiv.org/pdf/2510.06820" class="btn" target="_blank">
+                    <span class="icon">📄</span> Paper
+                </a>
+                <a href="https://github.com/gitanony04-lab/Simple-Efficient-Fusion" class="btn" target="_blank">
+                    <span class="icon">💻</span> Code
+                </a>
+            </div>
+        </header>
+
+        <img src="assets/teaser.png" alt="EDJE Teaser" class="teaser-image">
+        <p class="figure-caption">Figure 1: EDJE enables high-throughput vision-language reranking by compressing visual
+            tokens.</p>
+
+        <section class="abstract">
+            <h2>Abstract</h2>
+            <p>
+                Multimodal retrieval still leans on embedding-based models like CLIP for fast vector search over
+                pre-computed image embeddings. Yet, unlike text retrieval, where joint-encoder rerankers are standard,
+                comparable vision-language rerankers are largely absent. We find that seminal joint encoders such as
+                BLIP are severely bottlenecked by an expensive visual feature-extraction stage, preventing practical
+                deployment at scale. Motivated by this bottleneck, we introduce EDJE, an Efficient Discriminative Joint
+                Encoder that precomputes vision tokens offline and compresses them via a lightweight attention-based
+                adapter, so online inference runs only a compact joint encoder over a small set of visual tokens plus
+                the text. EDJE preserves strong retrieval performance while drastically reducing storage and online
+                compute, enabling high-throughput inference. Specifically, EDJE processes 50k image-text pairs/second
+                while requiring 49kB of disk storage per image, matching prior art on Flickr (zero-shot) and COCO
+                (fine-tuned) retrieval.
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="method">
+            <h2>Method</h2>
+            <img src="assets/architecture.png" alt="EDJE Architecture" class="method-image">
+            <p class="figure-caption">Figure 2: Overview of the EDJE architecture.</p>
+            <p>
+                EDJE introduces a lightweight adapter that compresses precomputed visual tokens, allowing for efficient
+                storage and fast online inference. By decoupling the heavy visual feature extraction from the online
+                reranking process, we achieve significant speedups without compromising accuracy.
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="results">
+            <h2>Results</h2>
+            <img src="assets/table1.png" alt="Comparison with SOTA" class="results-image">
+            <p class="figure-caption">Table 1: Comparison with state-of-the-art methods on Flickr30k and MS-COCO.</p>
+            <p>
+                Our method matches the performance of heavy joint encoders while being orders of magnitude faster.
+            </p>
+        </section>
+
+        <hr>
+
+        <section class="citation">
+            <h2>Citation</h2>
+            <pre><code>@article{taraday2025edje,
+  title={Efficient Discriminative Joint Encoders for Large Scale Vision-Language Reranking},
+  author={Taraday, Mitchell Keren and Wagner, Shahaf and Baskin, Chaim},
+  journal={arXiv preprint arXiv:2510.06820},
+  year={2025}
+}</code></pre>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 EDJE Project.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

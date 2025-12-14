@@ -1,0 +1,181 @@
+:root {
+    --primary-color: #333;
+    --link-color: #0066cc;
+    --bg-color: #f9f9f9;
+    --container-bg: #ffffff;
+    --text-color: #444;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--container-bg);
+    padding: 40px 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.authors {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.authors a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.authors a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.affiliations {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.btn.disabled {
+    background-color: #ccc;
+    cursor: default;
+}
+
+.icon {
+    margin-right: 6px;
+}
+
+.abstract {
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.teaser-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.figure-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.method-image,
+.results-image {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 4px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #eee;
+    margin: 40px 0;
+}
+
+.placeholder-image {
+    background-color: #f0f0f0;
+    border: 2px dashed #ddd;
+    color: #888;
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.citation pre {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+footer a {
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
