@@ -28,13 +28,86 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    /* Blue-Teal Gradient */
+    padding: 60px 40px;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.venue {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.authors {
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.authors a {
+    color: white;
+    text-decoration: none;
     font-weight: 600;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #111;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+.authors a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-style: solid;
+}
+
+.affiliations {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: #0083b0;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn.disabled {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    cursor: default;
+    box-shadow: none;
+    transform: none;
 }
 
 h2 {
@@ -43,56 +116,6 @@ h2 {
     margin-top: 30px;
     margin-bottom: 15px;
     color: #222;
-}
-
-.authors {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.authors a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.authors a:hover {
-    color: var(--link-color);
-    text-decoration: underline;
-}
-
-.affiliations {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 25px;
-}
-
-.links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 16px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: 500;
-    transition: background-color 0.2s;
-}
-
-.btn:hover {
-    background-color: #555;
-}
-
-.btn.disabled {
-    background-color: #ccc;
-    cursor: default;
 }
 
 .icon {
