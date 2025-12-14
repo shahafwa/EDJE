@@ -1,7 +1,7 @@
 # EDJE: Efficient Discriminative Joint Encoders for Large Scale Vision-Language Reranking
 
 [![arXiv](https://img.shields.io/badge/arXiv-2510.06820-b31b1b.svg)](https://arxiv.org/abs/2510.06820)
-[![Project Website](https://img.shields.io/badge/Project-Website-blue)](https://gitanony04-lab.github.io/Simple-Efficient-Fusion/)
+[![Project Website](https://img.shields.io/badge/Project-Website-blue)](https://shahafwa.github.io/EDJE/)
 
 **[Mitchell Keren Taraday](https://arxiv.org/search/cs?searchtype=author&query=Taraday,+Mitchell+Keren)\*, [Shahaf Wagner](https://arxiv.org/search/cs?searchtype=author&query=Wagner,+Shahaf)\*, [Chaim Baskin](https://arxiv.org/search/cs?searchtype=author&query=Baskin,+Chaim)**
 *INSIGHT Lab, Ben-Gurion University of the Negev, Israel*
@@ -16,7 +16,7 @@ Multimodal retrieval still leans on embedding-based models like CLIP for fast ve
 ## Installation
 
 ```bash
-git clone https://github.com/gitanony04-lab/Simple-Efficient-Fusion.git
+git clone https://github.com/shahafwa/EDJE.git
 cd Simple-Efficient-Fusion
 pip install -r requirements.txt
 ```
