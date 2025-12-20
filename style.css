@@ -36,6 +36,26 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+.logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.logo-img:hover {
+    opacity: 1;
+}
+
 .venue {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.9);
