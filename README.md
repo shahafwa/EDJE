@@ -38,7 +38,7 @@ python -m torch.distributed.run --nproc_per_node=8 evaluation/evaluate_retrieval
 ```
 
 ## Project Website
-Visit our [Project Website](https://gitanony04-lab.github.io/Simple-Efficient-Fusion/) for more visual results and details.
+Visit our [Project Website](https://shahafwa.github.io/EDJE/) for more visual results and details.
 
 ## Citation
 If you find this work useful, please cite our paper:
