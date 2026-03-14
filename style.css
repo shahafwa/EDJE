@@ -40,6 +40,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Added this to allow wrapping on small screens */
     gap: 40px;
     margin-bottom: 20px;
 }
@@ -99,6 +100,7 @@ h1 {
 .links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Added this so buttons wrap neatly on phones */
     gap: 15px;
     margin-top: 25px;
 }
@@ -212,6 +214,7 @@ footer a {
     color: #666;
 }
 
+/* Mobile responsive adjustments */
 @media (max-width: 600px) {
     .container {
         padding: 20px;
@@ -220,5 +223,14 @@ footer a {
 
     h1 {
         font-size: 1.8rem;
+    }
+
+    .logos-container {
+        gap: 20px; /* Reduces gap on mobile */
+    }
+
+    .logo-img {
+        height: 45px; /* Scales down logos so they fit better */
+        max-width: 100%; 
     }
 }
