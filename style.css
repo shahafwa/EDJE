@@ -236,4 +236,8 @@ footer a {
     .logo-img {
         height: 55px;
     }
+
+    .authors {
+        font-size: 0.95rem;
+    }
 }
